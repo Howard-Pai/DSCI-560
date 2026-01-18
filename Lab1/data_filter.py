@@ -58,7 +58,7 @@ if __name__ == "__main__":
     if latest_news:
         for news in latest_news:
             timestamp = news.find("time")
-            title_tag = news.find("a")
+            title_tag = news.find("a", class_="LatestNews-headlines")
             if timestamp and title_tag:
                 news_data.append([
                     timestamp.text.strip(),
